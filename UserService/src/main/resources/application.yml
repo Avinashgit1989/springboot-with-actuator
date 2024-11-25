@@ -30,8 +30,9 @@ spring:
 management:
   endpoints:
     web:
+      base-path: "/actuator"
       exposure:
-        include: health, metrics, env
+        include: "*" ## it will include all endpoints. if you want specific add like health, metrics, env
   # Set health endpoint details to show complete information
   endpoint:
     health:
